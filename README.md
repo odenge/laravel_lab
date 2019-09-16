@@ -20,14 +20,13 @@ Laravelの環境変数設定ファイル（コピー元）
 # git clone してから動かすまでの手順
 
 ```
-■「dockerのwebサーバーに入る」
+dockerのwebサーバーに入る
 docker-compose exec web bash
 
 ディレクトリ移動
 cd laravel_app
 
-vendorディレクトリ無いのでインストール
-一つ上の階層に「composer.phar」は存在する
+vendorディレクトリ無いのでインストール　※一つ上の階層に「composer.phar」は存在する
 php ../composer.phar install
 
 /laravel_app/.envを作成
