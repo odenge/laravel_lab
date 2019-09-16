@@ -1,9 +1,20 @@
 # 概要
 
 ```
-Laravelのテストプログラムを実行させる環境
+DockerにLaravelをインストールしたのみの
+シンプルなLaravelのテスト環境
+```
 
-動かなくてもよいので、様々なテストを試し、壊れたら作り直す
+# 環境変数設定ファイル
+
+```
+Dockerの環境変数設定ファイル
+/.env
+
+Laravelの環境変数設定ファイル（コピー元）
+/laravel_app/.env.example
+　↓　コピーして作成する
+/laravel_app/.env
 ```
 
 # git clone してから動かすまでの手順
@@ -19,10 +30,10 @@ vendorディレクトリ無いのでインストール
 一つ上の階層に「composer.phar」は存在する
 php ../composer.phar install
 
-.envを作成
+/laravel_app/.envを作成
 cp .env.example .env
 
-.envを下記の内容に一部変更　※「DB_HOST」は「db」とし「DB_PORT」は「3306」であることを注意
+/laravel_app/.envを下記の内容に一部変更　※「DB_HOST」は「db」とし「DB_PORT」は「3306」であることを注意
 DB_CONNECTION=mysql
 DB_HOST=db
 DB_PORT=3306
